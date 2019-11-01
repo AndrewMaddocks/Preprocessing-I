@@ -1,1 +1,402 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Muli Regular'), local('Muli-Regular'), url(https://fonts.gstatic.com/s/muli/v16/7Auwp_0qiz-afTLGKA.ttf) format('truetype');
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 62.5%;
+  background-color: #dfdcd9;
+  font-family: "Muli", sans-serif;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.6rem;
+  color: black;
+}
+.main-container .navdiv {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20% 0 20%;
+  margin: 30px 0 40px 0;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .main-container .navdiv {
+    width: 100%;
+    padding: 0;
+  }
+}
+.main-container .navdiv a {
+  font-size: 2rem;
+  text-decoration: none;
+  background-color: #b6babd;
+  color: black;
+  border-bottom: 3px solid #21455d;
+  border-radius: 10%;
+  padding: 0.9%;
+}
+.main-container .navdiv a:hover {
+  background-color: #dfdcd9;
+}
+.main-container .upper-section .info-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.main-container .maincont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .main-container .maincont {
+    flex-wrap: wrap;
+  }
+}
+.main-container .maincont .img1 {
+  width: 30%;
+}
+@media (max-width: 500px) {
+  .main-container .maincont .img1 {
+    width: 80%;
+  }
+}
+.main-container .maincont .img1 .meGQ {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+}
+.main-container .info {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #21455d;
+  border-top: 2px solid #21455d;
+  width: 40%;
+  margin-left: 5%;
+  padding: 1%;
+}
+@media (max-width: 500px) {
+  .main-container .info {
+    width: 100%;
+    text-align: center;
+    margin-top: 9%;
+    padding: 3%;
+  }
+}
+.main-container .info h1 {
+  color: solid black;
+}
+.main-container .skills-title-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .skills-title-div .skills-title {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  border-bottom: 2px solid #21455d;
+  width: 15%;
+  padding: 10px;
+}
+@media (max-width: 500px) {
+  .main-container .skills-title-div .skills-title {
+    width: 50%;
+  }
+}
+.main-container .skillscont {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 500px) {
+  .main-container .skillscont {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.main-container .css {
+  width: 30%;
+  margin-left: 20%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .main-container .css {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.main-container .html {
+  width: 30%;
+  margin-left: 50%;
+  text-align: center;
+  margin-top: 20px;
+}
+@media (max-width: 500px) {
+  .main-container .html {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.main-container .GitHub {
+  width: 30%;
+  margin-left: 20%;
+  text-align: center;
+  margin-top: 20px;
+}
+@media (max-width: 500px) {
+  .main-container .GitHub {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.main-container .workimg {
+  width: 90%;
+  height: 80%;
+  border-radius: 12%;
+}
+.main-container .work-title-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .work-title-div .work-title {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  border-bottom: 2px solid #21455d;
+  width: 20%;
+  padding: 10px;
+}
+@media (max-width: 500px) {
+  .main-container .work-title-div .work-title {
+    width: 60%;
+  }
+}
+.main-container .all-work {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .all-work .Construction {
+  width: 30%;
+  margin-left: 20%;
+  text-align: center;
+  border: 2px solid #21455d;
+  padding: 10px;
+  border-radius: 12%;
+  background-color: #b6babd;
+}
+@media (max-width: 500px) {
+  .main-container .all-work .Construction {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.main-container .olive-garden {
+  width: 30%;
+  margin-left: 50%;
+  text-align: center;
+  margin-top: 20px;
+  border: 2px solid #21455d;
+  padding: 10px;
+  border-radius: 12%;
+  background-color: #b6babd;
+}
+@media (max-width: 500px) {
+  .main-container .olive-garden {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.main-container .trainer {
+  width: 30%;
+  margin-left: 20%;
+  text-align: center;
+  margin-top: 20px;
+  border: 2px solid #21455d;
+  padding: 10px;
+  border-radius: 12%;
+  background-color: #b6babd;
+}
+@media (max-width: 500px) {
+  .main-container .trainer {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.main-container .contactme {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  .main-container .contactme {
+    justify-content: center;
+    margin-top: 5%;
+  }
+}
+.main-container .contactme h1 {
+  margin-right: 23%;
+}
+@media (max-width: 500px) {
+  .main-container .contactme h1 {
+    margin-right: 0;
+  }
+}
+.main-container .last-main-div {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20%;
+}
+@media (max-width: 500px) {
+  .main-container .last-main-div {
+    justify-content: center;
+    margin-right: 0;
+  }
+}
+.main-container .last-main-div a {
+  color: black;
+}

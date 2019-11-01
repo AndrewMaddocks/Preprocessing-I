@@ -4,56 +4,389 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+@main-color: #21455d;
 
-html, body {
-    height: 100%;
+.borderbottm() {
+  border-bottom: 2px solid @main-color;
 }
+.bordertop() {
+  border-top: 2px solid @main-color;
+}
+html,
+body {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 62.5%;
+  background-color: #dfdcd9;
+  font-family: "Muli", sans-serif;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.6rem;
+  color: black;
+}
+.main-container {
+  .navdiv {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20% 0 20%;
+    margin: 30px 0 40px 0;
+    width: 100%;
+    @media (max-width: 500px) {
+      width: 100%;
+      padding: 0;
+    } // this close my media query
+    a {
+      font-size: 2rem;
+      text-decoration: none;
+      background-color: rgb(182, 186, 189);
+      color: black;
+      border-bottom: 3px solid @main-color;
+      border-radius: 10%;
+      padding: 0.9%;
+    } // this closes the a's
+  } //this closes the navdiv
 
+  .navdiv a:hover {
+    background-color: #dfdcd9;
+  }
+
+  .upper-section {
+    .info-title {
+      text-align: center;
+      margin-bottom: 30px;
+    } //this closes info-title
+  } //this closes upper section
+
+  .maincont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 500px) {
+      flex-wrap: wrap;
+    } // this close my media query
+
+    .img1 {
+      width: 30%;
+
+      @media (max-width: 500px) {
+        width: 80%;
+      } // this close my media query
+
+      .meGQ {
+        width: 100%;
+        height: 100%;
+        border-radius: 10%;
+      } //this closes meGQ
+    } //this closes img1 ddiv
+  } //this closes main cont
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    .borderbottm();
+    .bordertop();
+    width: 40%;
+    margin-left: 5%;
+    padding: 1%;
+    @media (max-width: 500px) {
+      width: 100%;
+      text-align: center;
+      margin-top: 9%;
+      padding: 3%;
+    } // this close my media query
+
+    h1 {
+      color: solid black;
+    } //this closes h1
+  } //this closes info
+  .skills-title-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .skills-title {
+      text-align: center;
+      margin-bottom: 30px;
+      margin-top: 40px;
+      .borderbottm();
+      width: 15%;
+      padding: 10px;
+      @media (max-width: 500px) {
+        width: 50%;
+      } // this close my media query
+    } //this closes the title
+  } //this closes div
+
+  .skillscont {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 500px) {
+      justify-content: center;
+      align-items: center;
+    } // this close my media query
+  } //this closes skillscont
+
+  .css {
+    width: 30%;
+    margin-left: 20%;
+    text-align: center;
+    @media (max-width: 500px) {
+      width: 100%;
+      margin-left: 0;
+    } // this close my media query
+  } //this closes css
+  .html {
+    width: 30%;
+    margin-left: 50%;
+    text-align: center;
+    margin-top: 20px;
+    @media (max-width: 500px) {
+      width: 100%;
+      margin-left: 0;
+    } // this close my media query
+  } //this closes html
+  .GitHub {
+    width: 30%;
+    margin-left: 20%;
+    text-align: center;
+    margin-top: 20px;
+    @media (max-width: 500px) {
+      width: 100%;
+      margin-left: 0;
+    } // this close my media query
+  }
+  .workimg {
+    width: 90%;
+    height: 80%;
+    border-radius: 12%;
+  }
+
+  .work-title-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .work-title {
+      text-align: center;
+      margin-bottom: 30px;
+      margin-top: 40px;
+      .borderbottm();
+      width: 20%;
+      padding: 10px;
+      @media (max-width: 500px) {
+        width: 60%;
+      } // this close my media query
+    } //closes work title
+  } //closes title div
+  .all-work {
+    display: flex;
+    flex-direction: column;
+    .Construction {
+      width: 30%;
+      margin-left: 20%;
+      text-align: center;
+      border: 2px solid#21455d;
+      padding: 10px;
+      border-radius: 12%;
+      background-color: rgb(182, 186, 189);
+      @media (max-width: 500px) {
+        width: 100%;
+        margin-left: 0;
+      } // this close my media query
+    } //closes contruction
+  } //closes all-work
+  .olive-garden {
+    width: 30%;
+
+    margin-left: 50%;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid#21455d;
+    padding: 10px;
+    border-radius: 12%;
+    background-color: rgb(182, 186, 189);
+    @media (max-width: 500px) {
+      width: 100%;
+      margin-left: 0;
+    } // this close my media query
+  } //this closes olive-garden
+  .trainer {
+    width: 30%;
+    margin-left: 20%;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid#21455d;
+    padding: 10px;
+    border-radius: 12%;
+    background-color: rgb(182, 186, 189);
+    @media (max-width: 500px) {
+      width: 100%;
+      margin-left: 0;
+    } // this close my media query
+  } //this closes trainer
+  .contactme {
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 500px) {
+      justify-content: center;
+      margin-top: 5%;
+    } // this close my media query
+    h1 {
+      margin-right: 23%;
+      @media (max-width: 500px) {
+        margin-right: 0;
+      } // this close my media query
+    } //this closes h1
+  } //this closes contactme
+
+  .last-main-div {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20%;
+    @media (max-width: 500px) {
+      justify-content: center;
+      margin-right: 0;
+    } // this close my media query
+    a {
+      color: black;
+    } //closes lastmaindiv
+  } //closes a
+} //closes main container
